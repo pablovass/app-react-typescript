@@ -1,0 +1,8 @@
+{
+  "extends": "next/core-web-vitals",
+    // rules no apto para ambientes productivos 
+    "rules":{
+      "@next/next/no-img-element":"off",
+      "jsx/a11y/alt-text":"off"
+    }
+}
