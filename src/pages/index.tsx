@@ -3,11 +3,11 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { LazyImage } from "@/components/LazyImage";
 import type { MouseEventHandler } from "react";
-
+import {random}from "lodash";
 //genera un id unico
 const generateId=()=>Math.random().toString(36).substr(2,9);
-const random = () => Math.floor(Math.random() * 123) + 1;
-
+//const random = () => Math.floor(Math.random() * 123) + 1;
+const myRandom = () => random(1,123);
 
 const Home: NextPage = () => {
   const [images, setImages] = useState<Array<ImageItems>>([]);
@@ -16,7 +16,7 @@ const Home: NextPage = () => {
     
     const newImageItem={
       id: generateId(),
-      url:`https://randomfox.ca/images/${random()}.jpg`
+      url:`https://randomfox.ca/images/${myRandom()}.jpg`
     };
 setImages([...images,newImageItem]);
   }
