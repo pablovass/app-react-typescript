@@ -7,8 +7,6 @@ import type { MouseEventHandler } from "react";
 //genera un id unico
 const generateId=()=>Math.random().toString(36).substr(2,9);
 const random = () => Math.floor(Math.random() * 123) + 1;
-//type ImageItema=Array<{id:string;url:string}>
-type ImageItems={id:string;url:string}
 
 
 const Home: NextPage = () => {
